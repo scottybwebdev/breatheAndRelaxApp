@@ -1,0 +1,458 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #708BD7;
+    color: #fff;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.bodyOverflow {
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: calc(300px * 2);
+    width: calc(300px * 2);
+    transform: scale(1);
+}
+
+.container, .linksContainer {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+}
+
+.linksContainer {
+    height: 300px;
+    width: 300px;
+}
+
+.aboutContainer {
+    width: 100%;
+    margin: auto;
+    font-size: 30px;
+    text-align: justify;
+}
+
+.aboutDiv, .divH2 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.footer {
+    font-size: 20px;
+    width: 100%;
+    height: 32px;
+    text-align: center;
+}
+
+#text {
+    color: #fff;
+}
+
+#text, .pageTitle, #display {
+    font-size: 45px;
+}
+
+
+
+.circle {
+    background-color: #010f1c;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: calc(0px * 2);
+    left: calc(0px * 2);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+
+
+.pointer {
+    background-color: #fff;
+    border-radius: 50%;
+    height: calc(20px * 2);
+    width: calc(20px * 2);
+    display: block;
+}
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.2)
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/** homepage styles */
+
+
+/** timer styles */
+.timerContainer {
+    height: 300px;
+    width: 100%;
+}
+
+#display {
+    width: 100%;
+    text-align: center;
+    margin: 0px auto;
+}
+
+/** buttons */
+.timerButton, .breathingLink, .button, .return {
+    display: block;
+    border: aqua;
+    background-color: #3352BA;
+    color: white;
+    padding: 14px 28px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.timerButton {
+    width: 25%;
+    margin: 0px auto;
+}
+
+.breathingLink {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.breathingLink:hover, .button:hover, .timerButton:hover, .return:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.headerContainer {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.return, .button {
+    position: absolute;
+    top: 25px;
+    width: 275px;
+}
+
+.return {
+    right: 70%;
+}
+
+.button {
+    left: 70%;
+}
+
+/** modal styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;   /*order of elements, higher the z-index, more upfront it will be*/
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #3352BA;
+    margin: 20% auto;
+    width: 70%;
+    animation-name: modalopen;
+    animation-duration: 1s;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+}
+
+.modal-header h2, .modal-footer h3{
+    margin: 0;
+}
+
+.modal-header {
+    background: #4E78D7;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 10px 20px;
+    text-align: justify;
+    font-size: 30px;
+}
+
+.modal-footer{
+    background: #4E78D7;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.closeBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+
+/** media queries **/
+
+/** laptops and desktops **/
+
+@media only screen and (min-width: 992px) {
+    .linksContainer {
+        height: auto;
+        width: auto;
+    }
+
+    .container {
+        height: 300px;
+        width: 300px;    
+    }
+    
+    .footer {
+        font-size: 15px;
+        height: 22px;
+    }
+    
+    #text {
+        color: #fff;
+    }
+    
+    #text, .pageTitle {
+        font-size: 33.75px;
+    }
+
+    #display {
+        font-size: 22.5px;
+    }
+
+    .circle {
+        top: 0px;
+        left: 0px;
+    }
+
+    .pointer {
+        height: 20px;
+        width: 20px;
+    }
+        
+    /** homepage styles */
+    
+    
+    /** timer styles */
+    .timerContainer {
+        height: 150px;
+    }
+    
+    /** buttons */
+    .timerButton, .breathingLink, .button, .return {
+        padding: 7px 14px;
+        font-size: 20px;
+    }
+           
+    .return, .button, .timerButton {
+        top: 12.5px;
+        width: 137.5px;
+    }
+    
+    /** modal styles */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8.5px;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        width: 70%;
+        box-shadow: 0 2.5px 4px 0 rgba(0,0,0,0.2), 0 3.5px 10px 0 rgba(0,0,0,0.17);
+    }
+    
+    .modal-header {
+        padding: 7.5px;
+    }
+    
+    .modal-body {
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+    
+    .modal-footer{
+        padding: 5px;
+    }
+    
+    .closeBtn {
+        font-size: 15px;
+    }
+
+    .return {
+        right: 85%;
+    }
+    
+    .button {
+        left: 85%;
+    }
+
+    .button, .return {
+        top: 25%;
+    }
+}
+
+/** tablets **/
+@media only screen and (min-width: 600px) {
+    .linksContainer {
+        height: auto;
+        width: auto;
+    }
+
+    .container {
+        height: 450px;
+        width: 450px;    
+    }
+    
+    .footer {
+        font-size: 22.5px;
+        height: 33px;
+    }
+    
+    #text {
+        color: #fff;
+    }
+    
+    #text, .pageTitle {
+        font-size: 50.625px;
+    }
+
+    #display {
+        font-size: 33.75px;
+    }
+
+    .circle {
+        top: 0px;
+        left: 0px;
+    }
+
+    .pointer {
+        height: 30px;
+        width: 30px;
+    }
+        
+    /** homepage styles */
+    
+    
+    /** timer styles */
+    .timerContainer {
+        height: 225px;
+    }
+    
+    /** buttons */
+    .timerButton, .breathingLink, .button, .return {
+        padding: 10.5px 21px;
+        font-size: 30px;
+    }
+           
+    .return, .button, .timerButton {
+        top: 18.75px;
+        width: 206.25px;
+    }
+    
+    /** modal styles */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12.75px;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        width: 70%;
+        box-shadow: 0 3.75px 6px 0 rgba(0,0,0,0.2), 0 5.25px 15px 0 rgba(0,0,0,0.17);
+    }
+    
+    .modal-header {
+        padding: 10.75px;
+    }
+    
+    .modal-body {
+        padding: 7.5px 15px;
+        font-size: 22.5px;
+    }
+    
+    .modal-footer{
+        padding: 7.5px;
+    }
+    
+    .closeBtn {
+        font-size: 22.5px;
+    }
+
+    .return {
+        right: 75%;
+    }
+    
+    .button {
+        left: 75%;
+    }
+
+    .button, .return {
+        top: 30%;
+    }
+}    

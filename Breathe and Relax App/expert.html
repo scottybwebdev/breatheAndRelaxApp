@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relaxer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="expertStyle.css">
+</head>
+<body id="instructionsLoad" class="bodyOverflow">
+<div class="headerContainer">
+
+    <button onclick="window.location.href='index.html';" class="return">
+        Home
+    </button>
+
+    <h1 class="pageTitle">Advanced</h1>
+
+    <button id="infoBtn" class="button">Instructions</button>
+
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBtn">&times;</span> <!-- &times; creates x symbol -->
+                <h2>4-7-8 Breathing Technique</h2>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <ol>
+                        <li>First, let your lips part. Make a whooshing sound, exhaling completely through your mouth.</li>
+                        <li>Next, close your lips, inhaling silently through your nose as you count to four in your head.</li>
+                        <li>Then, for seven seconds, hold your breath.</li>
+                        <li>Make another whooshing exhale from your mouth for eight seconds.</li>
+                    </ol>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <h3>Simple Breathing v1.0</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="circle"></div>
+
+    <p id="text">Welcome!</p>
+
+    <div id="pointer-container">
+        <div class="pointer"></div>
+    </div>
+
+    <div class="gradient-circle"></div>
+
+</div>
+
+<br>
+
+<div class = timerContainer>
+
+    <div id = display>
+        00:00:00
+    </div>
+
+    <div class="buttons">
+        <button id="startStop" class="timerButton" onclick="startStop()">Start</button>
+        <br>
+        <button id="reset" class="timerButton" onclick="reset()">Reset</button>
+    </div>
+
+</div>
+
+<footer class="footer">Simple Breathing v1.0</footer>
+
+<script src="expertScript.js"></script>
+</body>
+</html>
